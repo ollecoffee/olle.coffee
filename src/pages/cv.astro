@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    I’m a cool coffee interested full stack developer with 10+ years experience. Besides that I move freely in the stack from JVM languages (such as Scala, Java and Kotlin), typescript, UX, database design, kafka, architect and mentor roles. I like to fishing with nets and brew coffee in my off time and follow League of Legends and the majors of CSGO.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Job Title at Project or Company Name"
+      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Job Title at Project or Company Name"
+      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Job Title at Project or Company Name"
+      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+        title="Bachelor of Science (B.Sc.), Computer Engineering"
+        subtitle="2011 to 2014 at KTH Royal Institute of Technology, Stockholm, Sweden"
+    />
+    <TimeLineElement
+        title="High School, IT, electronics and sciences"
+        subtitle="2008 to 2011 at IT-Gymnasiet Södertörn, Stockholm, Sweden"
+    />
+  </div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Volunteering</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="#" target="_blank">Association Secretary and Board Member at the TODO company</a>
+    </li>
+    <li>
+      <a href="#" target="_blank">TODO</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Java</li>
+    <li>Scala</li>
+    <li>Kotlin</li>
+    <li>PHP</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>SQL/NoSQL</li>
+    <li>Go</li>
+    <li>Node</li>
+    <li>Ruby</li>
+    <li>Git</li>
+    <li>Swedish (Native)</li>
+    <li>English (Fluent)</li>
+    <li>German (Basic)</li>
+    <li>Turkish (Basic)</li>
+  </ul>
+</BaseLayout>

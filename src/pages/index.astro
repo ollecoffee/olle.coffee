@@ -1,55 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const last_posts = posts.slice(0, 3);
 ---
 
-<Layout title="Welcome to Olles Coffee corner">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Olles Coffee corner</span></h1>
-	</main>
-</Layout>
+<BaseLayout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+    <div class="pb-12 mt-5">
+      <div class="text-xl py-1">Hey there ☕️</div>
+      <div class="text-5xl font-bold">I'm Olle Gynther Zillén</div>
+      <div class="text-3xl py-3 font-bold">Software Engineer and Coffee Enthusiast</div>
+      <div class="py-2">
+        <text class="text-lg">
+			I work creating software that solve complex problems in a simple way and sharing what I learn along the way. I like simplicity, automation and good coffee.
+          </text
+        >
+      </div>
+      <div class="mt-8">
+        <a class="btn" href="https://linkedin.com/in/ollegz" target="_blank"> Let's connect!</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from the coffee corner</div>
+    </div>
+
+    {
+      last_posts.map((post) => (
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + post.slug}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0"></div>
+      ))
+    }
+
+</BaseLayout>
