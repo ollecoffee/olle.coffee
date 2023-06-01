@@ -4,85 +4,126 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Profile</div>
+	</div>
 
-  <div class="mb-10 text-justify">
-    I’m a cool coffee interested full stack developer with 10+ years experience. Besides that I move freely in the stack from JVM languages (such as Scala, Java and Kotlin), typescript, UX, database design, kafka, architect and mentor roles. I like to fishing with nets and brew coffee in my off time and follow League of Legends and the majors of CSGO.
-  </div>
+	<div class="mb-10 text-justify">
+		I’m a cool coffee interested full stack developer with 10+ years experience. Besides that I move freely in the
+		stack from JVM languages (such as Scala, Java and Kotlin), typescript, UX, database design, kafka, architect and
+		mentor roles. I like to fishing with nets and brew coffee in my off time and follow League of Legends and the
+		majors of CSGO.
+	</div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Experience</div>
+	</div>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-  </div>
+	<div class="time-line-container mb-10">
+		<TimeLineElement
+				title="Software Engineer at Avanza Bank"
+				subtitle="From 2019-01-01 to current, Stockholm, Sweden"
+		>
+			In the team Cash Integration I work mainly with money integrations (deposits and
+			withdrawals). At Avanza we use gRPC for api communication which is incredibly powerful, and I have recently
+			written a lot of Typescript. Besides that I move freely in the stack from core java, UX, database design,
+			kafka, architect and mentor roles.
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
+			<div class=" text-sm font-light">Achievements:</div>
+			<ul class="list-disc md:columns-1 columns-2 mx-6">
+				<li>Launched Swish instant deposits for customers and been a part of the whole journey</li>
+				<li>Launched a new withdrawal page with BankID signing</li>
+				<li>Launched an automated autogiro flow</li>
+				<li>Launched an automated bankgiro flow</li>
+			</ul>
+		</TimeLineElement>
 
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-        title="Bachelor of Science (B.Sc.), Computer Engineering"
-        subtitle="2011 to 2014 at KTH Royal Institute of Technology, Stockholm, Sweden"
-    />
-    <TimeLineElement
-        title="High School, IT, electronics and sciences"
-        subtitle="2008 to 2011 at IT-Gymnasiet Södertörn, Stockholm, Sweden"
-    />
-  </div>
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Volunteering</div>
-  </div>
+		<TimeLineElement
+				title="Software Engineer at 3 Sverige"
+				subtitle="From 2016-05-01 to 2018-12-31, Stockholm, Sweden"
+		>
+			In the team Online Services I work mainly with integrations towards different
+			partners and is responsible for our product database Pimcore, to solve the product information management
+			needs, and Alternative Traffic Flow, where you may end up when you are out of data. Right now, it is full
+			focus on a GDPR solution for consent with microservices where I’m lead developer. Something that's really
+			been my cup of tea is the release process where I take great part from the Technical Writing for release
+			notes up until monitoring after every deploy. Besides being a Software Engineer I’m also Scrum Master where
+			I daily coach the team to succeed beyond our goals.
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank">Association Secretary and Board Member at the TODO company</a>
-    </li>
-    <li>
-      <a href="#" target="_blank">TODO</a>
-    </li>
-  </ul>
+			<div class=" text-sm font-light">Achievements:</div>
+			<ul class="list-disc md:columns-1 columns-2 mx-6">
+				<li>Successfully updated one of our CMS’s, PIM, to a major version from 3.0.5 to 4.4.3</li>
+				<li>Launched EU-roaming with 3 and 3Världen</li>
+			</ul>
+		</TimeLineElement>
+		<TimeLineElement
+				title="IT-trainee at 3 Sverige"
+				subtitle="From 2015-08-10 to 2016-04-30, Stockholm, Sweden"
+		/>
+	</div>
 
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Education</div>
+	</div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Java</li>
-    <li>Scala</li>
-    <li>Kotlin</li>
-    <li>PHP</li>
-    <li>JavaScript</li>
-    <li>TypeScript</li>
-    <li>SQL/NoSQL</li>
-    <li>Go</li>
-    <li>Node</li>
-    <li>Ruby</li>
-    <li>Git</li>
-    <li>Swedish (Native)</li>
-    <li>English (Fluent)</li>
-    <li>German (Basic)</li>
-    <li>Turkish (Basic)</li>
-  </ul>
+	<div class="time-line-container grid gap-4 mb-10">
+		<TimeLineElement
+				title="Bachelor of Science (B.Sc.), Computer Engineering"
+				subtitle="2011 to 2014 at KTH Royal Institute of Technology, Stockholm, Sweden"
+		/>
+		<TimeLineElement
+				title="High School, IT, electronics and sciences"
+				subtitle="2008 to 2011 at IT-Gymnasiet Södertörn, Stockholm, Sweden"
+		/>
+	</div>
+
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Volunteering</div>
+	</div>
+
+
+	<div class="time-line-container mb-10">
+		<TimeLineElement
+				title="Association Secretary and Board Member"
+				subtitle="2015 to 2019 at Ungdomens Nykterhetsförbund, Stockholm, Sweden"
+		>
+			Which means coordinating documentation for the annual report, responsible for associations meetings journal
+			which means writing, compile and make them available for members. I also compiled descisions made by the
+			board for future follow up. As an association secretary, I was also part of the board which means ​following
+			an operational plan & budget decided by our congress, and making strategies and guidelines for the
+			organization in long term. I also mentored two districts.
+		</TimeLineElement>
+		<TimeLineElement
+				title="Board Member"
+				subtitle="2014 to 2015 at Student Union, Tekniska Högskolans Studentkår, Stockholm, Sweden"
+		>
+			The board work for the Student Union THS, included setting operational plan, budgets, strategies and
+			guidelines for the organization in long term. One of the most important functions is also to elect the
+			Management Team of THS, who takes a sabbatical year from The Royal Institute of Technology to work full time
+			at THS. As an organization, THS's areas of operations are Educational Affairs, Business Relations, Student
+			Life and Social Activities.
+		</TimeLineElement>
+	</div>
+
+	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Skills</div>
+	</div>
+
+	<ul class="list-disc md:columns-5 columns-2 mx-6">
+		<li>Java</li>
+		<li>Scala</li>
+		<li>Kotlin</li>
+		<li>PHP</li>
+		<li>JavaScript</li>
+		<li>TypeScript</li>
+		<li>SQL/NoSQL</li>
+		<li>Go</li>
+		<li>Node</li>
+		<li>Ruby</li>
+		<li>Git</li>
+		<li>Swedish (Native)</li>
+		<li>English (Fluent)</li>
+		<li>German (Basic)</li>
+		<li>Turkish (Basic)</li>
+	</ul>
 </BaseLayout>
