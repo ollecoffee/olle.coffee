@@ -5,11 +5,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 import image from "@astrojs/image";
-import {SITE_URL} from "./src/config.js";
+import { site } from './src/data/config.json';
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE_URL,
+  site: site.baseurl,
   integrations: [mdx(), sitemap(), tailwind(), image(
     {
       serviceEntryPoint: '@astrojs/image/sharp',
