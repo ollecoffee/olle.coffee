@@ -1,0 +1,61 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "assignees": [
+    "ollegz"
+  ],
+  "packageRules": [
+    {
+      "enabledManagers": ["github-actions", "npm"]
+    },
+    {
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "description": "Disables the creation of branches/PRs for any minor/patch updates etc. of Renovate bot",
+      "matchPaths": [
+        "renovate-update-notification/Dockerfile"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "rollback"
+      ],
+      "enabled": false
+    },
+    {
+      "description": "Causes the bot to create a PR (and thus, an email notification), whenever there is a new major Renovate version",
+      "matchPaths": [
+        "renovate-update-notification/Dockerfile"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false,
+      // just re-states the default and ensures that PRs are really created - you can remove this line
+      // if you did not change "prCreation" elsewhere to some non-default value
+      "prCreation": "immediate",
+    }
+  ],
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "platformAutomerge": true,
+  "rebaseWhen": "behind-base-branch",
+  "rollbackPrs": true,
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+}
