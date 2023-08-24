@@ -6,27 +6,28 @@ import SideBar from "../components/SideBar.astro";
 
 import { site } from '../data/config.json';
 
-const { image, title = site.title, description = site.description, includeSidebar = true } = Astro.props;
+const {image, title = site.title, description = site.description, includeSidebar = true} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en" data-theme="autumn">
-  <head>
-    <BaseHead title={site.title} description={site.description} image={image} />
-  </head>
-  <body>
-    <div class="bg-base-100 drawer drawer-mobile">
-      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col bg-base-100">
-        <Header title={site.title} />
-        <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 max-w-[900px]">
-            <slot />
-          </main>
-        </div>
-        <Footer />
-      </div>
-      {includeSidebar && <SideBar />}
-    </div>
-  </body>
+<head>
+	<BaseHead title={site.title} description={site.description} image={image}/>
+</head>
+<body>
+<div class="bg-base-100 drawer lg:drawer-open">
+	<input id="my-drawer" type="checkbox" class="drawer-toggle"/>
+	<div class="drawer-content bg-base-100">
+		<Header title={site.title}/>
+		<div class="md:flex md:justify-center">
+			<main class="p-6 pt-10 max-w-[900px]">
+				<slot/>
+			</main>
+		</div>
+		<Footer/>
+	</div>
+    {includeSidebar &&
+			<SideBar/>}
+</div>
+</body>
 </html>
