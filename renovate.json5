@@ -8,13 +8,6 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": [
-        "npm",
-        "github-actions",
-      ],
-      "enabled": true,
-    },
-    {
       "description": "Automatically merge minor and patch-level updates",
       "matchUpdateTypes": [
         "minor",
@@ -57,6 +50,7 @@
     "before 5pm every weekday",
     "every weekend"
   ],
+  "timezpne": "Europe/Stockholm",
   "platformAutomerge": true,
   "rebaseWhen": "behind-base-branch",
   "rollbackPrs": true,
