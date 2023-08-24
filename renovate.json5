@@ -50,7 +50,7 @@
     "before 5pm every weekday",
     "every weekend"
   ],
-  "timezpne": "Europe/Stockholm",
+  "timezone": "Europe/Stockholm",
   "platformAutomerge": true,
   "rebaseWhen": "behind-base-branch",
   "rollbackPrs": true,
