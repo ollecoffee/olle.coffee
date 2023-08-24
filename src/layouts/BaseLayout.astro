@@ -6,7 +6,7 @@ import SideBar from "../components/SideBar.astro";
 
 import { site } from '../data/config.json';
 
-const {image, title = site.title, description = site.description, includeSidebar = true} = Astro.props;
+const {image, title = site.title, description = site.description, includeSidebar = true, sideBarActiveItemID} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ const {image, title = site.title, description = site.description, includeSidebar
 		<Footer/>
 	</div>
     {includeSidebar &&
-			<SideBar/>}
+			<SideBar sideBarActiveItemID={sideBarActiveItemID}/>}
 </div>
 </body>
 </html>
