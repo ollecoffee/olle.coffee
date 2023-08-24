@@ -53,8 +53,8 @@
     }
   ],
   "schedule": [
-    "after 10pm every weekday",
-    "before 5am every weekday",
+    "after 10am every weekday",
+    "before 5pm every weekday",
     "every weekend"
   ],
   "platformAutomerge": true,
