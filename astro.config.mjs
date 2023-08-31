@@ -4,17 +4,10 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-import image from "@astrojs/image";
 import { site } from './src/data/config.json';
 
 // https://astro.build/config
 export default defineConfig({
   site: site.baseurl,
-  integrations: [mdx(), sitemap(), tailwind(), image(
-    {
-      serviceEntryPoint: '@astrojs/image/sharp',
-      cacheDir: "./.cache/image",
-      logLevel: 'debug',
-    }
-  )]
+  integrations: [mdx(), sitemap(), tailwind()]
 });
