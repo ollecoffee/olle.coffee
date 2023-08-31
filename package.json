@@ -11,13 +11,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.3",
+    "@astrojs/image": "^0.18.0",
     "@astrojs/mdx": "^1.0.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.10.15",
-    "daisyui": "^3.6.3",
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^3.0.0",
+    "daisyui": "^3.6.4",
     "dayjs": "^1.11.9",
     "sharp": "^0.32.5"
   },
