@@ -2,7 +2,7 @@
 title: "Hello World"
 description: "Coffee tasting blog perhaps?"
 pubDate: "Jun 01 2023"
-heroImage: "/coffee_blog1.webp"
+heroImage: "../images/coffee_blog1.webp"
 badge: "Coffee"
 ---
 
