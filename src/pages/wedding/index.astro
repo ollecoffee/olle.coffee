@@ -1,6 +1,7 @@
 ---
 const weddingUrl = `https://www.svt.se`;
 const speechUrl = `https://sverigesradio.se`;
+const locationUrl = `https://maps.app.goo.gl/oihr2LeWHCzLMc5A6`;
 import weddingImage from "../../images/wedding.jpg";
 import { Image } from 'astro:assets';
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -20,6 +21,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			<a class="btn btn-accent mt-9" href=`${weddingUrl}`>Kom direkt till anmälningsformuläret</a>
 			<br />
 			<a class="btn btn-info mt-9" href=`${speechUrl}`>Vill du tala på bröllopet? Klicka här</a>
+			<br />
+			<a class="btn btn-link mt-9" href=`${locationUrl}`>Hitta till bröllopet 🗺</a>
 		</section>
 	</div>
 </BaseLayout>
