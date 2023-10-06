@@ -2,6 +2,7 @@
 const weddingUrl = `https://forms.gle/8X6yVCKKCA4xK3ye8`;
 const speechUrl = `https://sverigesradio.se`;
 const locationUrl = `https://maps.app.goo.gl/oihr2LeWHCzLMc5A6`;
+const imageUrl = `https://www.instagram.com/explore/tags/emineolle2024`;
 import weddingImage from "../../images/wedding.jpg";
 import { Image } from 'astro:assets';
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -14,11 +15,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			<Image class="mx-auto mb-2" src={weddingImage} width="240" height="320" alt="Emine & Olle at the location 5 years ago"/>
 			<h1 class="text-4xl font-bold mb-2">25/5-24</h1>
 			<h3 class="text-2xl font-bold mb-2">Klockan 17:00</h3>
-			<a class="btn btn-accent mt-2" href=`${weddingUrl}`>Anmäl dig till bröllopet här! 🥳</a>
+			<a class="btn btn-secondary mt-2" href=`${weddingUrl}`>Anmäl dig till bröllopet här! 🥳</a>
 			<br />
 			<a class="btn btn-info mt-4" href=`${speechUrl}`>Vill du tala på bröllopet? Klicka här 🤩</a>
 			<br />
 			<a class="btn btn-success mt-4" href=`${locationUrl}`>Hitta till bröllopet 🗺</a>
+			<br />
+			<a class="btn btn-warning mt-4" href=`${imageUrl}`>Vår hashtag #emineolle2024 på Instagram 📸</a>
 		</section>
 	</div>
 </BaseLayout>
