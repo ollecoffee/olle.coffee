@@ -28,7 +28,6 @@ jobs:
         with:
           package-manager: pnpm
           node-version: 20
-          pnpm-version: 8.8.0
 
   deploy:
     needs: build
