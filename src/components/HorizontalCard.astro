@@ -1,24 +1,25 @@
 ---
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
+const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+    class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
-        img && (
-          <Image
-            src={img}
-            height={222}
-            width={450}
-            format="webp"
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-          />
-        )
+          img && (
+              <Image
+                  src={img}
+                  height={222}
+                  width={450}
+                  format="webp"
+                  alt={title}
+                  class="max-w-full md:max-w-[13rem] rounded-lg"
+              />
+          )
       }
       <div class="grow w-full">
         <h1 class="text-xl font-bold">
@@ -28,8 +29,12 @@ import { Image } from 'astro:assets';
         <p class="py-1 text-1xl">{desc}</p>
         <div class="card-actions justify-end">
           {
-            tags &&
-              tags.map((tag) => <div class="badge badge-outline">{tag}</div>)
+              tags &&
+              tags.map((tag) => (
+                  <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+                    {tag}
+                  </a>
+              ))
           }
         </div>
       </div>
