@@ -2,7 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
-import profile from '../images/profile-olle.jpg'
+import profile from '/profile-olle.jpg'
 
 export interface Props {
 	title: string;
@@ -16,8 +16,8 @@ const { title, description, image = profile } = Astro.props;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/png" sizes="32x32" href="../../public/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="../../public/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
