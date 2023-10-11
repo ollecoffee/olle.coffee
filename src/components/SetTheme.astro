@@ -73,9 +73,9 @@ const { lightColor, darkColor } = Astro.props;
         };
 
         const setThemeColor = (theme) => {
-            if (theme === "luxury") {
+            if (theme === "dark") {
                 setThemeColors(darkColor, darkColor);
-            } else if (theme === "bumblebee") {
+            } else if (theme === "light") {
                 setThemeColors(lightColor, lightColor);
             } else {
                 setThemeColors(lightColor, darkColor);
@@ -126,9 +126,9 @@ const { lightColor, darkColor } = Astro.props;
     };
 
     const setThemeColor = (theme: string | null) => {
-        if (theme === "luxury") {
+        if (theme === "dark") {
             setThemeColors(darkColor, darkColor);
-        } else if (theme === "bumblebee") {
+        } else if (theme === "light") {
             setThemeColors(lightColor, lightColor);
         } else {
             setThemeColors(lightColor, darkColor);
