@@ -1,0 +1,165 @@
+---
+interface Props {
+    lightColor: string;
+    darkColor: string;
+}
+
+const { lightColor, darkColor } = Astro.props;
+---
+
+<!-- Store the theme colors for scripts to use -->
+<meta
+		name="set-theme-color-data"
+		data-light-color={lightColor}
+		data-dark-color={darkColor}
+/>
+
+<!--
+  Start with theme color set by preferred color scheme
+  This will work when user is on "Default" theme
+-->
+<meta
+		name="theme-color"
+		media="(prefers-color-scheme: light)"
+		content={lightColor}
+/>
+<meta
+		name="theme-color"
+		media="(prefers-color-scheme: dark)"
+		content={darkColor}
+/>
+
+<script is:inline>
+    // This script is inline to apply styles as early as possible
+    // to avoid a flash of unthemed content
+
+    // Loads theme from local storage and applies to document
+    const setTheme = () => {
+        const theme = localStorage.getItem("theme");
+
+        if (theme) {
+            document.documentElement.setAttribute("data-theme", theme);
+        } else {
+            document.documentElement.removeAttribute("data-theme");
+        }
+
+        const getThemeColorData = () => {
+            const setThemeColorData = document.querySelector(
+                'meta[name="set-theme-color-data"]'
+            );
+            if (setThemeColorData instanceof HTMLElement) {
+                const lightColor = setThemeColorData.dataset["lightColor"];
+                const darkColor = setThemeColorData.dataset["darkColor"];
+                if (lightColor && darkColor) {
+                    return { lightColor, darkColor };
+                }
+            }
+            return { lightColor: "#EEEEEE", darkColor: "#333333" };
+        };
+
+        const { lightColor, darkColor } = getThemeColorData();
+
+        const setThemeColors = (l, d) => {
+            document
+                .querySelector(
+                    'meta[name="theme-color"][media="(prefers-color-scheme: light)"]'
+                )
+                ?.setAttribute("content", l);
+            document
+                .querySelector(
+                    'meta[name="theme-color"][media="(prefers-color-scheme: dark)"]'
+                )
+                ?.setAttribute("content", d);
+        };
+
+        const setThemeColor = (theme) => {
+            if (theme === "luxury") {
+                setThemeColors(darkColor, darkColor);
+            } else if (theme === "bumblebee") {
+                setThemeColors(lightColor, lightColor);
+            } else {
+                setThemeColors(lightColor, darkColor);
+            }
+        };
+
+        setThemeColor(theme);
+    };
+
+    // Runs on initial navigation
+    setTheme();
+
+    // Runs on view transitions navigation
+    document.addEventListener("astro:after-swap", setTheme);
+</script>
+
+<script>
+    // This script isn't inline, so it runs after the select
+    // elements for choosing a theme are present
+
+    const getThemeColorData = () => {
+        const setThemeColorData = document.querySelector(
+            'meta[name="set-theme-color-data"]'
+        );
+        if (setThemeColorData instanceof HTMLElement) {
+            const lightColor = setThemeColorData.dataset["lightColor"];
+            const darkColor = setThemeColorData.dataset["darkColor"];
+            if (lightColor && darkColor) {
+                return { lightColor, darkColor };
+            }
+        }
+        return { lightColor: "#EEEEEE", darkColor: "#333333" };
+    };
+
+    const { lightColor, darkColor } = getThemeColorData();
+
+    const setThemeColors = (l: string, d: string) => {
+        document
+            .querySelector(
+                'meta[name="theme-color"][media="(prefers-color-scheme: light)"]'
+            )
+            ?.setAttribute("content", l);
+        document
+            .querySelector(
+                'meta[name="theme-color"][media="(prefers-color-scheme: dark)"]'
+            )
+            ?.setAttribute("content", d);
+    };
+
+    const setThemeColor = (theme: string | null) => {
+        if (theme === "luxury") {
+            setThemeColors(darkColor, darkColor);
+        } else if (theme === "bumblebee") {
+            setThemeColors(lightColor, lightColor);
+        } else {
+            setThemeColors(lightColor, darkColor);
+        }
+    };
+
+    // Sets up theme color meta, and adds event listeners to any ThemeSelect controls
+    const setThemeSelects = () => {
+        const theme = localStorage.getItem("theme");
+
+        // setThemeColor(theme);
+
+        [...document.querySelectorAll("select[data-choose-theme]")].forEach(
+            (el) => {
+                if (el instanceof HTMLSelectElement) {
+                    if (theme) {
+                        el.value = theme;
+                    }
+                    el.addEventListener("change", function () {
+                        document.documentElement.setAttribute("data-theme", el.value);
+                        setThemeColor(el.value);
+                        localStorage.setItem("theme", el.value);
+                    });
+                }
+            }
+        );
+    };
+
+    // Runs on initial navigation
+    setThemeSelects();
+
+    // Runs on view transitions navigation
+    document.addEventListener("astro:after-swap", setThemeSelects);
+</script>
