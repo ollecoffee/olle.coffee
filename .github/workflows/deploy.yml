@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+        with:
+          lfs: true
       - name: Install and setup bun package manager
         uses: oven-sh/setup-bun@v1
       - name: Install, build, and upload your site
