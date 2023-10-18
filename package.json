@@ -1,7 +1,7 @@
 {
   "name": "olle.coffee",
   "type": "module",
-  "version": "4.3.2",
+  "version": "4.4.2",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -22,6 +22,10 @@
     "sharp": "^0.32.6"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10"
-  }
+    "@tailwindcss/typography": "^0.5.10",
+    "bun-types": "latest"
+  },
+  "trustedDependencies": [
+    "sharp"
+  ]
 }
