@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olle.coffee/sitemap-index.xml
