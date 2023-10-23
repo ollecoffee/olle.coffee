@@ -32,7 +32,6 @@ jobs:
         with:
           bun-version: latest
 
-      - run: bun add @tailwindcss/typography
       - run: bun install
 
       - name: Install, build, and upload your site
