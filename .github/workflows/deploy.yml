@@ -24,7 +24,7 @@ jobs:
       - name: Setup npm and sharp
         uses: actions/setup-node@v4
         with:
-          version: 20
+          node-version: 20
       - run: npm install sharp
 
       - name: Setup Bun
