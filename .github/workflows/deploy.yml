@@ -21,18 +21,6 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
-      - name: Setup npm and sharp
-        uses: actions/setup-node@v3
-      - run: npm install sharp
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-
-      - run: bun add @tailwindcss/typography
-      - run: bun install
-
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
