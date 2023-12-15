@@ -21,6 +21,12 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
 
+      - name: Setup npm and sharp
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+      - run: npm install sharp
+
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
