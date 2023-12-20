@@ -26,6 +26,7 @@ jobs:
         with:
           bun-version: latest
       - run: bun install
+      - run: bun --bun astro build
 
       - name: Install, build, and upload your site
         uses: withastro/action@v1
