@@ -11,6 +11,5 @@
         "src/layouts/*"
       ]
     },
-    "types": ["@types/bun"]
   }
 }
