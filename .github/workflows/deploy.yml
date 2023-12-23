@@ -24,7 +24,6 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
           bun-version: latest
       - run: bun install
       - run: bun --bun astro build
