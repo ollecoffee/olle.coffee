@@ -17,23 +17,13 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.url }}
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-
-      - name: Install, build, and upload your site
-        uses: withastro/action@v1
+      - name: Build and Deploy
+        id: deploy
+        uses: withastro/action@configure-site
         with:
           package-manager: bun@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
           node-version: 21
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
