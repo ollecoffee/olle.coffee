@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
   schedule:
-    - cron: '20 16 * * *' # Run every day at midnight
+    - cron: '30 16 * * *' # Run every day at midnight
 
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
