@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
 <BaseLayout title={title} description={description} image={heroImage}>
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
-      {heroImage && <Image height={222} width={450} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
+      {heroImage && <Image height={222} width={450} format="webp" src={heroImage} alt={title} class="w-1/2 mb-6" />}
       <h1 class="title my-2 text-4xl font-bold">{title}</h1>
       {pubDate && <time>{displayDate}</time>}
       <br />
