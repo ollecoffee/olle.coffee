@@ -1,0 +1,19 @@
+---
+const imageUrl = `https://www.instagram.com/explore/tags/emineolle2024`;
+const photoUrl = `https://photos.app.goo.gl/ZS3W5M4FBsK93TrD9`;
+import weddingImage from "../../images/wedding.webp";
+import { Image } from 'astro:assets';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Bröllop!" includeSidebar={false}>
+	<div class="text-center">
+		<section>
+			<h1 class="text-4xl font-bold mb-2">💍 Bröllopsfoton 🎉</h1>
+			<Image class="mx-auto mb-2" src={weddingImage} width="240" height="320" alt="Emine & Olle at the location 5 years ago"/>
+			<a class="btn btn-success mt-2" href=`${photoUrl}`>Ladda upp bilder till vårt album här! 🥳</a>
+			<br />
+			<a class="btn btn-warning mt-4" href=`${imageUrl}`>Vår hashtag #emineolle2024 på Instagram 📸</a>
+		</section>
+	</div>
+</BaseLayout>
