@@ -26,5 +26,5 @@ jobs:
         id: deploy
         uses: withastro/action@configure-site
         with:
-          package-manager: bun@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          package-manager: bun@1.0.25 # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
           node-version: 21
