@@ -1,4 +1,9 @@
 ---
+export interface Props {
+	includeSideBar: boolean;
+}
+
+const {includeSideBar} = Astro.props;
 import ThemeSelect from './ThemeSelect.astro';
 ---
 <div
@@ -19,7 +24,7 @@ import ThemeSelect from './ThemeSelect.astro';
 			<a class="btn btn-ghost normal-case text-xl lg:hidden" href="/">Olle Gynther Zillén ☕️️</a>
 		</div>
 		<div class="navbar-end">
-			<!--<ThemeSelect/>-->
+			{includeSideBar && <ThemeSelect/>}
 		</div>
 	</div>
 </div>
