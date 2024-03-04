@@ -15,7 +15,7 @@
     "@astrojs/rss": "4.0.5",
     "@astrojs/sitemap": "3.1.1",
     "@astrojs/tailwind": "5.1.0",
-    "astro": "4.4.10",
+    "astro": "4.4.11",
     "daisyui": "4.7.2",
     "dayjs": "1.11.10",
     "tailwindcss": "3.4.1"
