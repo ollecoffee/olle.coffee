@@ -23,7 +23,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "0.5.12",
     "@types/bun": "1.0.11",
-    "bun": "1.0.35"
+    "bun": "1.0.36"
   },
   "trustedDependencies": [
     "sharp"
