@@ -7,13 +7,13 @@ import { ViewTransitions } from "astro:transitions";
 
 import { site } from '../data/config.json';
 
-const {image, title = site.title, description = site.description, includeSidebar = true, sideBarActiveItemID} = Astro.props;
+const {image, title = site.title, description = site.description, includeSidebar = true, sideBarActiveItemID, ogType} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" data-theme="dracula">
 <head>
-	<BaseHead title={title} description={site.description} image={image}/>
+	<BaseHead title={title} description={site.description} image={image} ogType={ogType}/>
 	<ViewTransitions />
 </head>
 <body>
