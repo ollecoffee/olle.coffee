@@ -41,7 +41,7 @@ import { Image } from "astro:assets";
       {
 
           video && <video controls width={450} height={222} class="m-auto"
-                          controlslist="nodownload">
+                          controlslist="nodownload" preload="metadata">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
