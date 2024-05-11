@@ -1,6 +1,6 @@
 ---
-const weddingUrl = `https://forms.gle/8X6yVCKKCA4xK3ye8`;
 const speechUrl = `https://forms.gle/VtUp5Qu1SzDf1hgP9`;
+const photoUrl = `https://weduploader.com/upload/FXVoGleiMBiOIN63`;
 const locationUrl = `https://maps.app.goo.gl/oihr2LeWHCzLMc5A6`;
 const imageUrl = `https://www.instagram.com/explore/tags/emineolle2024`;
 import weddingImage from "../../images/wedding.webp";
@@ -15,24 +15,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 			<Image class="mx-auto mb-2" src={weddingImage} width="240" height="320" alt="Emine & Olle at the location 5 years ago"/>
 			<h1 class="text-4xl font-bold mb-2">25/5-24</h1>
 			<h3 class="text-2xl font-bold mb-2">Klockan 17:00</h3>
-			Parkering finns och kostar 45kr/h.
-
-			Klädkod
-			Kavaj
-			Sköna skor - Vi kommer om vädret tillåter delvis vara utomhus med ojämnt vägunderlag
-
-			Presenter
-			Det viktigaste för oss är att ni kommer. Om ni vill ge en present uppskattas bidrag till bröllopsresa.
 			<h4 class="text-xl font-bold mb-2">Parkering</h4>
+			<p>Det finns 20 parkeringsplatser precis vid Rosendals Trädgård (slå in Rosendalsvägen 38 pà GPS:en).
+				<br />Dessa kostar 45kr/h.
+				<br />Om det är fullt så finns även en större parkering i Stockholms Stads regi (81 platser), på andra sidan trädgården.
+				<br />Följ Djurgårdsvägen hela vägen fràn Djurgårdsbron till Bellmansro och sväng där in till höger pà Sirishovsvägen.
+				<br />Följ skyltning "P Rosendal".</p>
 			<h4 class="text-xl font-bold mb-2">Klädkod</h4>
+			<p>Kavaj &
+			Sköna skor - Vi kommer om vädret tillåter delvis vara utomhus med ojämnt vägunderlag.
+			</p>
 			<h4 class="text-xl font-bold mb-2">Presenter</h4>
-			<a class="btn btn-success mt-2" href=`${weddingUrl}`>Anmäl dig till bröllopet här! 🥳</a>
-			<br />
-			<a class="btn btn-info mt-4" href=`${speechUrl}`>Vill du tala på bröllopet? Klicka här 🤩</a>
+			<p>Det viktigaste för oss är att ni kommer. Om ni vill ge en present uppskattas bidrag till bröllopsresa,
+				<br />gärna via Swish till Emine eller Olle.</p>
+			<a class="btn btn-warning mt-4" href=`${imageUrl}`>Vår hashtag #emineolle2024 på Instagram 📸</a>
 			<br />
 			<a class="btn btn-accent mt-4" href=`${locationUrl}`>Hitta till bröllopet 🗺</a>
 			<br />
-			<a class="btn btn-warning mt-4" href=`${imageUrl}`>Vår hashtag #emineolle2024 på Instagram 📸</a>
+			<a class="btn btn-success mt-2" href=`${photoUrl}`>Ladda upp bilder till vårt album här! 🥳</a>
+			<br />
+			<a class="btn btn-info mt-4" href=`${speechUrl}`>Vill du tala på bröllopet? Klicka här 🤩</a>
 		</section>
 	</div>
 </BaseLayout>
