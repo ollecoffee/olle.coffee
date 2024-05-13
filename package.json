@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.13",
-    "@types/bun": "1.1.1",
+    "@types/bun": "1.1.2",
     "bun": "1.1.8"
   },
   "trustedDependencies": [
