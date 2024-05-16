@@ -1,7 +1,10 @@
-import { z, defineCollection } from "astro:content";
+import { defineCollection, reference, z, type InferEntrySchema } from 'astro:content';
 
-const blogSchema =
-     ({image}) =>
+export type BlogSchema = InferEntrySchema<'blog'>;
+
+const blogCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
         z.object({
             title: z.string(),
             description: z.string(),
@@ -9,17 +12,16 @@ const blogSchema =
             updatedDate: z.string().optional(),
             heroImage: image().optional(),
             badge: z.string().optional(),
-            tags: z.array(z.string()).refine(items => new Set(items).size === items.length, {
-                message: 'tags must be unique',
-            }).optional(),
+            tags: z
+                .array(z.string())
+                .refine((items) => new Set(items).size === items.length, {
+                    message: 'tags must be unique',
+                })
+                .optional(),
             video: z.string().optional(),
-        })
-
-export type BlogSchema = z.infer<typeof blogSchema>;
-
-const blogCollection = defineCollection({ schema: blogSchema,
-    type: 'content'});
+        }),
+});
 
 export const collections = {
-    'blog': blogCollection,
-}
+    blog: blogCollection,
+};
