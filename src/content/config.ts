@@ -1,4 +1,4 @@
-import { defineCollection, reference, z, type InferEntrySchema } from 'astro:content';
+import { defineCollection, z, type InferEntrySchema } from 'astro:content';
 
 export type BlogSchema = InferEntrySchema<'blog'>;
 
