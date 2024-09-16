@@ -3,7 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 import { site } from '../data/config.json';
 
@@ -14,7 +14,7 @@ const {image, title = site.title, description = site.description, includeSidebar
 <html lang="en" data-theme="dracula">
 <head>
 	<BaseHead title={title} description={description} image={image} ogType={ogType}/>
-	<ViewTransitions />
+	<ClientRouter />
 	<title>{title}</title>
 </head>
 <body>
