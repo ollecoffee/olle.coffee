@@ -10,7 +10,4 @@ import {site} from './src/data/config.json';
 export default defineConfig({
     site: site.baseurl,
     integrations: [mdx(), sitemap(), tailwind()],
-    legacy: {
-        collections: true,
-    },
 });
