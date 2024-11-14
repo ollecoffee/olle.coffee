@@ -4,7 +4,7 @@ import { defineCollection, z, type InferEntrySchema } from 'astro:content';
 export type BlogSchema = InferEntrySchema<'blog'>;
 
 const blogCollection = defineCollection({
-    loader: glob({ pattern: '**\/[^_]*.mdx', base: "./src/content/blog" }),
+    loader: glob({ pattern: '**\/[^_]*.mdx', base: "./src/blog" }),
     schema: ({ image }) =>
         z.object({
             title: z.string(),
