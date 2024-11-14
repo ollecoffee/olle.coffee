@@ -1,24 +1,25 @@
+import { glob } from 'astro/loaders';
 import { defineCollection, z, type InferEntrySchema } from 'astro:content';
 
 export type BlogSchema = InferEntrySchema<'blog'>;
 
 const blogCollection = defineCollection({
-    type: 'content',
+    loader: glob({ pattern: '**\/[^_]*.mdx', base: "./src/blog" }),
     schema: ({ image }) =>
         z.object({
             title: z.string(),
             description: z.string(),
             pubDate: z.coerce.date(),
-            updatedDate: z.string().optional(),
-            heroImage: image().optional(),
-            badge: z.string().optional(),
+            updatedDate: z.optional(z.string()),
+            heroImage: z.optional(image()),
+            badge: z.optional(z.string()),
             tags: z
-                .array(z.string())
-                .refine((items) => new Set(items).size === items.length, {
-                    message: 'tags must be unique',
-                })
-                .optional(),
-            video: z.string().optional(),
+                .optional(
+                    z.array(z.string()).refine((items) => new Set(items).size === items.length, {
+                        message: 'tags must be unique',
+                    })
+                ),
+            video: z.optional(z.string()),
         }),
 });
 
