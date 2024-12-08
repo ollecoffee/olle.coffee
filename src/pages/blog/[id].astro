@@ -16,14 +16,14 @@ const { Content } = await render(post);
 ---
 
 <PostLayout
-		title={post.title}
-		description={post.description}
-		pubDate={post.pubDate}
-		heroImage={post.heroImage}
-		updatedDate={post.updatedDate}
-		badge={post.badge}
-		tags={post.tags}
-		video={post.video}
+	title={post.data.title}
+	description={post.data.description}
+	pubDate={post.data.pubDate}
+	heroImage={post.data.heroImage}
+	updatedDate={post.data.updatedDate}
+	badge={post.data.badge}
+	tags={post.data.tags}
+	video={post.data.video}
 >
 	<Content />
 </PostLayout>
