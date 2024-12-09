@@ -16,12 +16,12 @@ import { Image } from "astro:assets";
       <h1 class="title my-2 text-4xl font-bold">{title}</h1>
       {pubDate && <time>{displayDate}</time>}
       <br />
-      {badge && <div class="badge badge-secondary my-1">{badge}</div>}
+      {badge && <div class="badge badge-secondary my-1 ml-2">{badge}</div>}
       <br />
       {
           tags &&
           tags.map((tag) => (
-              <a href={`/blog/tag/${tag}`} class="badge badge-outline ml-2 no-underline">
+              <a href={`/blog/tag/${tag}`} class="badge badge-ghost ml-2 no-underline">
                 {tag}
               </a>
           ))
