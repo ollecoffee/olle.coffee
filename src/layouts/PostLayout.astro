@@ -13,8 +13,8 @@ import { Image } from "astro:assets";
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {heroImage && <Image height={222} width={450} loading="lazy" format="webp" src={heroImage} alt={title} class="w-1/2 mb-6" />}
-      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
-      {pubDate && <time>{displayDate}</time>}
+      <h1 class="title my-2 text-4xl font-bold ml-2">{title}</h1>
+      {pubDate && <time class="ml-2">{displayDate}</time>}
       <br />
       {badge && <div class="badge badge-secondary my-1 ml-2">{badge}</div>}
       <br />
@@ -30,11 +30,11 @@ import { Image } from "astro:assets";
           updatedDate && (
               <div>
                 {" "}
-                Last updated on <time>{updatedDate}</time>{" "}
+                Last updated on <time class="ml-2">{updatedDate}</time>{" "}
               </div>
           )
       }
-      <p class="italic font-bold">{description}</p>
+      <p class="italic font-bold ml-2">{description}</p>
       <div class="divider my-2"></div>
       <slot />
       {
