@@ -17,6 +17,7 @@ import { Image } from "astro:assets";
       {pubDate && <time>{displayDate}</time>}
       <br />
       {badge && <div class="badge badge-secondary my-1">{badge}</div>}
+      <br />
       {
           tags &&
           tags.map((tag) => (
@@ -33,6 +34,7 @@ import { Image } from "astro:assets";
               </div>
           )
       }
+      <p class="italic font-bold">{description}</p>
       <div class="divider my-2"></div>
       <slot />
       {
