@@ -22,7 +22,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Install, build, and upload your site
-        uses: withastro/action@e5dd289a30fd5ebe674bd1ddb027ad2b416100d4 # v3.0.1
+        uses: withastro/action@56781b97402ce0487b7e61ce2cb960c0e2cc5289 # v3.0.2
         with:
           package-manager: bun@latest
           node-version: 22
