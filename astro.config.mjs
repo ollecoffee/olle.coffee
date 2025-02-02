@@ -13,5 +13,5 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
     site: site.baseurl,
-    integrations: [mdx(), sitemap(), tailwind()],
+    integrations: [mdx(), sitemap()],
 });
