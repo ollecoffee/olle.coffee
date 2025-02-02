@@ -32,6 +32,9 @@ const themes = [
 	"dim",
 	"nord",
 	"sunset",
+	"caramellatte",
+	"abyss",
+	"silk",
 ];
 ---
 
@@ -43,7 +46,7 @@ const themes = [
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"
-			fill="oklch(var(--b1))"
+			fill="oklch(var(--color-base-300))"
 		>
 			<path
 				fill-rule="evenodd"
@@ -104,7 +107,7 @@ const themes = [
 
 <script is:inline>
 	function getSavedTheme() {
-		return window.localStorage.getItem("data-theme") || "cmyk";
+		return window.localStorage.getItem("data-theme") || "caramellatte";
 	}
 
 	function applyOutlineClass(doc, theme) {
