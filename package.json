@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/bun": "1.2.2",
-    "bun": "1.2.2"
+    "bun": "1.2.3"
   },
   "trustedDependencies": [
     "sharp"
