@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/mdx": "4.2.0",
     "@astrojs/rss": "4.0.11",
-    "@astrojs/sitemap": "3.2.1",
+    "@astrojs/sitemap": "3.3.0",
     "@tailwindcss/vite": "4.0.14",
     "astro": "5.5.2",
     "daisyui": "5.0.6",
