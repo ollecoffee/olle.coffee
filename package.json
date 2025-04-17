@@ -21,7 +21,7 @@
     "tailwindcss": "4.1.4"
   },
   "devDependencies": {
-    "@types/bun": "1.2.9",
+    "@types/bun": "1.2.10",
     "bun": "1.2.10"
   },
   "trustedDependencies": [
