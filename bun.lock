@@ -14,7 +14,7 @@
         "tailwindcss": "4.1.6",
       },
       "devDependencies": {
-        "@types/bun": "1.2.12",
+        "@types/bun": "1.2.13",
         "bun": "1.2.13",
       },
     },
@@ -267,7 +267,7 @@
 
     "@tailwindcss/vite": ["@tailwindcss/vite@4.1.6", "", { "dependencies": { "@tailwindcss/node": "4.1.6", "@tailwindcss/oxide": "4.1.6", "tailwindcss": "4.1.6" }, "peerDependencies": { "vite": "^5.2.0 || ^6" } }, "sha512-zjtqjDeY1w3g2beYQtrMAf51n5G7o+UwmyOjtsDMP7t6XyoRMOidcoKP32ps7AkNOHIXEOK0bhIC05dj8oJp4w=="],
 
-    "@types/bun": ["@types/bun@1.2.12", "", { "dependencies": { "bun-types": "1.2.12" } }, "sha512-lY/GQTXDGsolT/TiH72p1tuyUORuRrdV7VwOTOjDOt8uTBJQOJc5zz3ufwwDl0VBaoxotSk4LdP0hhjLJ6ypIQ=="],
+    "@types/bun": ["@types/bun@1.2.13", "", { "dependencies": { "bun-types": "1.2.13" } }, "sha512-u6vXep/i9VBxoJl3GjZsl/BFIsvML8DfVDO0RYLEwtSZSp981kEO1V5NwRcO1CPJ7AmvpbnDCiMKo3JvbDEjAg=="],
 
     "@types/debug": ["@types/debug@4.1.12", "", { "dependencies": { "@types/ms": "*" } }, "sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ=="],
 
@@ -335,7 +335,7 @@
 
     "bun": ["bun@1.2.13", "", { "optionalDependencies": { "@oven/bun-darwin-aarch64": "1.2.13", "@oven/bun-darwin-x64": "1.2.13", "@oven/bun-darwin-x64-baseline": "1.2.13", "@oven/bun-linux-aarch64": "1.2.13", "@oven/bun-linux-aarch64-musl": "1.2.13", "@oven/bun-linux-x64": "1.2.13", "@oven/bun-linux-x64-baseline": "1.2.13", "@oven/bun-linux-x64-musl": "1.2.13", "@oven/bun-linux-x64-musl-baseline": "1.2.13", "@oven/bun-windows-x64": "1.2.13", "@oven/bun-windows-x64-baseline": "1.2.13" }, "os": [ "linux", "win32", "darwin", ], "cpu": [ "x64", "arm64", ], "bin": { "bun": "bin/bun.exe", "bunx": "bin/bun.exe" } }, "sha512-EhP1MhFbicqtaRSFCbEZdkcFco8Ov47cNJcB9QmKS8U4cojKHfLU+dQR14lCvLYmtBvGgwv/Lp+9SSver2OPzQ=="],
 
-    "bun-types": ["bun-types@1.2.12", "", { "dependencies": { "@types/node": "*" } }, "sha512-tvWMx5vPqbRXgE8WUZI94iS1xAYs8bkqESR9cxBB1Wi+urvfTrF1uzuDgBHFAdO0+d2lmsbG3HmeKMvUyj6pWA=="],
+    "bun-types": ["bun-types@1.2.13", "", { "dependencies": { "@types/node": "*" } }, "sha512-rRjA1T6n7wto4gxhAO/ErZEtOXyEZEmnIHQfl0Dt1QQSB4QV0iP6BZ9/YB5fZaHFQ2dwHFrmPaRQ9GGMX01k9Q=="],
 
     "camelcase": ["camelcase@8.0.0", "", {}, "sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA=="],
 
