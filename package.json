@@ -23,8 +23,5 @@
   "devDependencies": {
     "@types/bun": "1.2.18",
     "bun": "1.2.18"
-  },
-  "trustedDependencies": [
-    "sharp"
-  ]
+  }
 }
