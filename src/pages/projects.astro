@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import espresso_tools from "../images/espresso-tools.webp";
+import pour_coffee from "../images/pour-coffee.webp";
 ---
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
@@ -9,7 +11,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   </div>
 	<HorizontalCard
 			title="Espresso Tools wishlist"
-			img="/espresso-tools.webp"
+			img={espresso_tools}
 			desc="espresso.tools is my personal wishlist and collection of coffee equipment I use, love, or aspire to own. From espresso machines and grinders to small accessories that make a big difference, it’s a curated list of tools I believe in – whether they’re part of my current setup or sitting on my dream bench. It’s both a reference for myself and inspiration for anyone looking to explore the craft of espresso at home."
 			url="https://espresso.tools"
 			badge="Espresso"
@@ -17,7 +19,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 	<div class="divider my-0"></div>
 	<HorizontalCard
 			title="Pour Over Coffee guide"
-			img="/pour-coffee.webp"
+			img={pour_coffee}
 			desc="pour.coffee is my detailed guide to pour-over brewing – a slow and mindful way of making coffee that I’ve come to love. Here I share step-by-step instructions, favorite recipes, and the tools that help bring out the best in every cup. I built it to make pour-over feel approachable and fun, whether you’re just starting out or refining your technique. Together with espresso.tools, it’s part of my ongoing journey into the world of coffee – a space to learn, experiment, and enjoy the ritual of brewing."
 			url="https://pour.coffee"
 			badge="Pour Over"
