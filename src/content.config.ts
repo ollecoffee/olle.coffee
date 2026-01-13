@@ -1,6 +1,6 @@
-import { glob } from 'astro/loaders';
 import { defineCollection } from "astro:content"
 import { z } from "astro/zod"
+import { glob } from "astro/loaders";
 
 const blog = defineCollection({
     loader: glob({ pattern: '**\/[^_]*.mdx', base: "./blog" }),
@@ -9,19 +9,17 @@ const blog = defineCollection({
             title: z.string(),
             description: z.string(),
             pubDate: z.coerce.date(),
-            updatedDate: z.optional(z.string()),
-            heroImage: z.optional(image()),
-            badge: z.optional(z.string()),
+            updatedDate: z.string().optional(),
+            heroImage: image().optional(),
+            badge: z.string().optional(),
             tags: z
-                .optional(
-                    z.array(z.string()).refine((items) => new Set(items).size === items.length, {
-                        message: 'tags must be unique',
-                    })
-                ),
-            video: z.optional(z.string()),
+                .array(z.string())
+                .refine((items) => new Set(items).size === items.length, {
+                    message: 'tags must be unique',
+                })
+                .optional(),
+            video: z.string().optional(),
         }),
 });
 
-export const collections = {
-    blog
-};
+export const collections = { blog };
