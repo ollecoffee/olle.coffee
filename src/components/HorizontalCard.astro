@@ -2,6 +2,7 @@
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from 'astro:assets';
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
+const displayTags = tags?.filter((tag: string) => tag !== "Coffee" && tag !== title);
 ---
 
 <div
@@ -27,16 +28,15 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
         <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
-          {
-              tags &&
-              tags.map((tag) => (
-                  <a href={`${tag_url}/${tag}`} class="badge border-current">
-                    {tag}
-                  </a>
-              ))
-          }
-        </div>
+        {
+          displayTags && displayTags.length > 0 && (
+            <div class="flex flex-wrap gap-1 mt-2">
+              {displayTags.map((tag: string) => (
+                <span class="badge badge-outline badge-sm">{tag}</span>
+              ))}
+            </div>
+          )
+        }
       </div>
     </div>
   </a>

@@ -13,6 +13,9 @@ const {image, title = site.title, description = site.description, includeSidebar
 <!doctype html>
 <html lang="en" data-theme="caramellatte">
 <head>
+	<script is:inline>
+		(function(){var t=localStorage.getItem("data-theme");if(t)document.documentElement.setAttribute("data-theme",t)})();
+	</script>
 	<BaseHead title={title} description={description} image={image} ogType={ogType}/>
 	<ClientRouter />
 	<title>{title}</title>

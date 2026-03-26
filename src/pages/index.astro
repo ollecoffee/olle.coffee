@@ -20,12 +20,31 @@ const last_posts = posts.slice(0, 3);
       <div class="text-3xl py-3 font-bold">Software Engineer and Coffee Enthusiast</div>
       <div class="py-2">
         <text class="text-lg">
-			I am creating software that solve complex problems in a simple way and sharing what I learn along the way. I like simplicity, automation and good coffee.
+			I write code by day and pull espresso shots by morning. This is where the two worlds collide. Building software, brewing coffee, and sharing what I learn along the way.
           </text>
       </div>
       <div class="mt-8 flex items-center space-x-3">
         <a class="btn btn-lg btn-soft" href={site.linkedin_url} target="_blank">Let's connect!</a>
       </div>
+    </div>
+
+    <div>
+      <div class="text-3xl w-full font-bold mb-5 mt-10">Coffee projects</div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      <a href="https://espresso.tools" target="_blank" class="card bg-base-200 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+        <div class="card-body">
+          <h2 class="card-title">espresso.tools</h2>
+          <p>Curated wishlist of espresso gear I use, love, or dream of owning.</p>
+        </div>
+      </a>
+      <a href="https://pour.coffee" target="_blank" class="card bg-base-200 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+        <div class="card-body">
+          <h2 class="card-title">pour.coffee</h2>
+          <p>A guide to pour over brewing with step by step recipes and the tools behind every cup.</p>
+        </div>
+      </a>
     </div>
 
     <div>
@@ -41,6 +60,7 @@ const last_posts = posts.slice(0, 3);
           url={"/blog/" + post.id}
           target="_self"
           badge={post.data.badge}
+          tags={post.data.tags}
         />
         <div class="divider my-0"></div>
       ))
