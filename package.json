@@ -16,7 +16,7 @@
     "@astrojs/sitemap": "3.7.3",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "4.3.3",
-    "astro": "7.1.5",
+    "astro": "7.1.6",
     "daisyui": "5.7.7",
     "tailwindcss": "4.3.3",
     "vite": "8.1.5"
