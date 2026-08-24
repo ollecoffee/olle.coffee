@@ -41,14 +41,20 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command                     | Action                                           |
+| :-------------------------- | :----------------------------------------------- |
+| `deno install`              | Installs dependencies (`--frozen`, as CI does)   |
+| `deno task dev`             | Starts local dev server at `localhost:4321`      |
+| `deno task build`           | Build your production site to `./dist/`          |
+| `deno task preview`         | Preview your build locally, before deploying     |
+| `deno task astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `deno task astro -- --help` | Get help using the Astro CLI                     |
+
+Dependencies and tasks live in `deno.json`. The stub `package.json` carries no
+dependencies — it exists so Deno applies Node-style resolution to the prerender
+entry Astro emits into `dist/`, which imports a few of Astro's own transitive
+deps by bare specifier. Delete it and `deno task build` fails with
+`Import "devalue" not a dependency and not in import map`.
 
 ## 👀 Want to learn more?
 
