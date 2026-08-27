@@ -1,12 +1,12 @@
 {
   "version": "5",
   "specifiers": {
-    "npm:@astrojs/mdx@7.0.8": "7.0.8_astro@7.2.5__@astrojs+markdown-remark@7.2.4__@emnapi+core@1.11.1__@emnapi+runtime@1.11.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1",
+    "npm:@astrojs/mdx@7.0.8": "7.0.8_astro@7.2.6__@astrojs+markdown-remark@7.2.4__@emnapi+core@1.11.1__@emnapi+runtime@1.11.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1",
     "npm:@astrojs/rss@4.0.19": "4.0.19",
     "npm:@astrojs/sitemap@3.7.3": "3.7.3",
     "npm:@tailwindcss/typography@~0.5.19": "0.5.20_tailwindcss@4.3.3",
     "npm:@tailwindcss/vite@4.3.3": "4.3.3_vite@8.2.2__esbuild@0.28.2",
-    "npm:astro@7.2.5": "7.2.5_@astrojs+markdown-remark@7.2.4_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1",
+    "npm:astro@7.2.6": "7.2.6_@astrojs+markdown-remark@7.2.4_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1",
     "npm:daisyui@5.7.22": "5.7.22",
     "npm:sharp@~0.35.3": "0.35.3",
     "npm:tailwindcss@4.3.3": "4.3.3",
@@ -124,7 +124,7 @@
         "satteri"
       ]
     },
-    "@astrojs/mdx@7.0.8_astro@7.2.5__@astrojs+markdown-remark@7.2.4__@emnapi+core@1.11.1__@emnapi+runtime@1.11.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1": {
+    "@astrojs/mdx@7.0.8_astro@7.2.6__@astrojs+markdown-remark@7.2.4__@emnapi+core@1.11.1__@emnapi+runtime@1.11.1_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1": {
       "integrity": "sha512-RNuwq2ccTSi7NX9YqlR0noaWoVdOrZuJvdfWXotAzdhMVB0b0zEMLnNU+xar7le0GwTMlTObD/QAu8jeHA/3nA==",
       "dependencies": [
         "@astrojs/internal-helpers",
@@ -1009,8 +1009,8 @@
       "integrity": "sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==",
       "bin": true
     },
-    "astro@7.2.5_@astrojs+markdown-remark@7.2.4_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1": {
-      "integrity": "sha512-E92+I7yiqB2GA7u87JFpVG+glyGAYsGbiWPoZhH7mEja5SXyZniMoDd4UUuySpzM0tU4OlVWvYCcithkd/Hkig==",
+    "astro@7.2.6_@astrojs+markdown-remark@7.2.4_@emnapi+core@1.11.1_@emnapi+runtime@1.11.1": {
+      "integrity": "sha512-qzT4tAhgHYX/6/MUGslAkF0PVkM4WNsMw2A1GrbfA9cXp68hmdqF3f7MuF5rRFvwQbjowqjOf90ao9whfgV5mw==",
       "dependencies": [
         "@astrojs/compiler-rs",
         "@astrojs/internal-helpers",
@@ -3099,7 +3099,7 @@
       "npm:@astrojs/sitemap@3.7.3",
       "npm:@tailwindcss/typography@~0.5.19",
       "npm:@tailwindcss/vite@4.3.3",
-      "npm:astro@7.2.5",
+      "npm:astro@7.2.6",
       "npm:daisyui@5.7.22",
       "npm:sharp@~0.35.3",
       "npm:tailwindcss@4.3.3",
