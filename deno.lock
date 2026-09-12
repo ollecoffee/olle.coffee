@@ -5,12 +5,12 @@
     "npm:@astrojs/rss@4.0.19": "4.0.19",
     "npm:@astrojs/sitemap@3.7.4": "3.7.4",
     "npm:@tailwindcss/typography@~0.5.19": "0.5.20_tailwindcss@4.3.3",
-    "npm:@tailwindcss/vite@4.3.3": "4.3.3_vite@8.2.2",
+    "npm:@tailwindcss/vite@4.3.3": "4.3.3_vite@8.3.0",
     "npm:astro@7.3.2": "7.3.2_@emnapi+core@1.11.1_@emnapi+runtime@1.11.3",
     "npm:daisyui@5.7.32": "5.7.32",
     "npm:sharp@~0.35.3": "0.35.4",
     "npm:tailwindcss@4.3.3": "4.3.3",
-    "npm:vite@8.2.2": "8.2.2_esbuild@0.28.2"
+    "npm:vite@8.3.0": "8.3.0_esbuild@0.28.2"
   },
   "npm": {
     "@astrojs/compiler-binding-darwin-arm64@0.4.0": {
@@ -835,7 +835,7 @@
         "tailwindcss"
       ]
     },
-    "@tailwindcss/vite@4.3.3_vite@8.2.2": {
+    "@tailwindcss/vite@4.3.3_vite@8.3.0": {
       "integrity": "sha512-yYU8cogLeSh/ms2jh8Fj7jaba/EWa7Ja6GoUqYZaraEuCI5YS6ms6ObZgjjedm+jm6XZjdNRWBpPP6Z86oOxcw==",
       "dependencies": [
         "@tailwindcss/node",
@@ -1966,8 +1966,8 @@
         "vfile-message"
       ]
     },
-    "vite@8.2.2_esbuild@0.28.2": {
-      "integrity": "sha512-cFKLV/PRgAUlIRm5WjMjJ86jrftzpqcgH+Us+DS8mI3CDNiH30Whrz8uHL3+MOLPAgqbMBAqWdAHAphOAM+z/Q==",
+    "vite@8.3.0_esbuild@0.28.2": {
+      "integrity": "sha512-lhZBVvEHefgE+HQZC9O7EBJgCU/nVzFNl7vkS4RE0APtWLP02/8QVIkQtzBxPquh7lq5/78NHipTj7ODQ6XuyQ==",
       "dependencies": [
         "esbuild",
         "lightningcss@1.33.0",
@@ -1985,13 +1985,7 @@
       "bin": true
     },
     "vitefu@1.1.3_vite@8.2.2": {
-      "integrity": "sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==",
-      "dependencies": [
-        "vite"
-      ],
-      "optionalPeers": [
-        "vite"
-      ]
+      "integrity": "sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg=="
     },
     "xml-naming@0.3.0": {
       "integrity": "sha512-ghig2TBE/H11aOVgmahA3MhimvkBr6JIYknH/Dhdk10nXwdbIqBJsbfMxpvFPG8bAw77gN29aQWvKpmVoPlvPQ=="
@@ -2023,7 +2017,7 @@
       "npm:daisyui@5.7.32",
       "npm:sharp@~0.35.3",
       "npm:tailwindcss@4.3.3",
-      "npm:vite@8.2.2"
+      "npm:vite@8.3.0"
     ]
   }
 }
