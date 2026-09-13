@@ -7,7 +7,7 @@
     "npm:@tailwindcss/typography@~0.5.19": "0.5.20_tailwindcss@4.3.3",
     "npm:@tailwindcss/vite@4.3.3": "4.3.3_vite@8.3.0",
     "npm:astro@7.3.2": "7.3.2_@emnapi+core@1.11.1_@emnapi+runtime@1.11.3",
-    "npm:daisyui@5.7.36": "5.7.36",
+    "npm:daisyui@5.7.37": "5.7.37",
     "npm:sharp@~0.35.3": "0.35.4",
     "npm:tailwindcss@4.3.3": "4.3.3",
     "npm:vite@8.3.0": "8.3.0_esbuild@0.28.2"
@@ -1071,8 +1071,8 @@
         "css-tree@2.2.1"
       ]
     },
-    "daisyui@5.7.36": {
-      "integrity": "sha512-/UkPPj1FeEOWA6I69Jno1SsSx6856E6A/w3b6eK/1i2a6xYiZ4AySsepsog3RR3feb0cyF94Lnzlq/CLOCS7Aw=="
+    "daisyui@5.7.37": {
+      "integrity": "sha512-PVcdAcL0ni6/wmcNwvldARZuO0HdzxtjVEAT86ie9GMgFjwmqIWeXsPaM2/eYqLb4WMexqj146C5Z1xmzZDnjg=="
     },
     "defu@6.1.7": {
       "integrity": "sha512-7z22QmUWiQ/2d0KkdYmANbRUVABpZ9SNYyH5vx6PZ+nE5bcC0l7uFvEfHlyld/HcGBFTL536ClDt3DEcSlEJAQ=="
@@ -2014,7 +2014,7 @@
       "npm:@tailwindcss/typography@~0.5.19",
       "npm:@tailwindcss/vite@4.3.3",
       "npm:astro@7.3.2",
-      "npm:daisyui@5.7.36",
+      "npm:daisyui@5.7.37",
       "npm:sharp@~0.35.3",
       "npm:tailwindcss@4.3.3",
       "npm:vite@8.3.0"
