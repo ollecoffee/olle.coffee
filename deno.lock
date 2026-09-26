@@ -5,12 +5,12 @@
     "npm:@astrojs/rss@4.0.19": "4.0.19",
     "npm:@astrojs/sitemap@3.7.4": "3.7.4",
     "npm:@tailwindcss/typography@~0.5.19": "0.5.20_tailwindcss@4.3.3",
-    "npm:@tailwindcss/vite@4.3.3": "4.3.3_vite@8.3.0",
+    "npm:@tailwindcss/vite@4.3.3": "4.3.3_vite@8.3.1",
     "npm:astro@7.3.5": "7.3.5",
     "npm:daisyui@5.7.44": "5.7.44",
     "npm:sharp@~0.35.3": "0.35.4",
     "npm:tailwindcss@4.3.3": "4.3.3",
-    "npm:vite@8.3.0": "8.3.0_esbuild@0.28.2"
+    "npm:vite@8.3.1": "8.3.1_esbuild@0.28.2"
   },
   "npm": {
     "@astrojs/compiler-binding-android-arm64@0.5.0": {
@@ -856,7 +856,7 @@
         "tailwindcss"
       ]
     },
-    "@tailwindcss/vite@4.3.3_vite@8.3.0": {
+    "@tailwindcss/vite@4.3.3_vite@8.3.1": {
       "integrity": "sha512-yYU8cogLeSh/ms2jh8Fj7jaba/EWa7Ja6GoUqYZaraEuCI5YS6ms6ObZgjjedm+jm6XZjdNRWBpPP6Z86oOxcw==",
       "dependencies": [
         "@tailwindcss/node",
@@ -1990,8 +1990,8 @@
         "vfile-message"
       ]
     },
-    "vite@8.3.0_esbuild@0.28.2": {
-      "integrity": "sha512-lhZBVvEHefgE+HQZC9O7EBJgCU/nVzFNl7vkS4RE0APtWLP02/8QVIkQtzBxPquh7lq5/78NHipTj7ODQ6XuyQ==",
+    "vite@8.3.1_esbuild@0.28.2": {
+      "integrity": "sha512-/bvH9E9tmCXRGp2uXY3WbOldqpTwFkbha/8ANaEQ6VkxhH60KyqLwgZq6lG2y+4uT55x9+9eUHMpQ7uGnOCKjA==",
       "dependencies": [
         "esbuild",
         "lightningcss@1.33.0",
@@ -2008,7 +2008,7 @@
       ],
       "bin": true
     },
-    "vitefu@1.1.3_vite@8.3.0": {
+    "vitefu@1.1.3_vite@8.3.1_esbuild@0.28.2": {
       "integrity": "sha512-ub4okH7Z5KLjb6hDyjqrGXqWtWvoYdU3IGm/NorpgHncKoLTCfRIbvlhBm7r0YstIaQRYlp4yEbFqDcKSzXSSg==",
       "dependencies": [
         "vite"
@@ -2047,7 +2047,7 @@
       "npm:daisyui@5.7.44",
       "npm:sharp@~0.35.3",
       "npm:tailwindcss@4.3.3",
-      "npm:vite@8.3.0"
+      "npm:vite@8.3.1"
     ]
   }
 }
