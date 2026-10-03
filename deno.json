@@ -17,6 +17,6 @@
     "daisyui": "npm:daisyui@5.7.46",
     "sharp": "npm:sharp@^0.35.3",
     "tailwindcss": "npm:tailwindcss@4.3.3",
-    "vite": "npm:vite@8.3.1"
+    "vite": "npm:vite@8.3.2"
   }
 }
