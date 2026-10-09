@@ -1,61 +1,46 @@
-# Astro Starter Kit: Basics
+# olle.coffee
 
-```
-npm create astro@latest -- --template basics
-```
+[Olles Coffee corner](https://olle.coffee): a coffee blog, a CV and a few side
+projects. Built with [Astro](https://astro.build), Tailwind and daisyUI, and
+deployed to GitHub Pages.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Development
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
-
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+pnpm install   # CI installs with --frozen-lockfile
+pnpm dev       # localhost:4321
+pnpm build
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+| Command          | Action                                           |
+| :--------------- | :----------------------------------------------- |
+| `pnpm install`   | Install dependencies                             |
+| `pnpm dev`       | Start the dev server at `localhost:4321`         |
+| `pnpm build`     | Build the production site to `./dist/`           |
+| `pnpm preview`   | Preview the build locally before deploying       |
+| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check` |
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Structure
 
-Any static assets, like images, can be placed in the `public/` directory.
+```
+blog/                  posts as .mdx, hero images alongside them
+src/pages/             index, cv, projects, blog, wedding, rss.xml, 404
+src/components/        header, sidebar, cards, theme select, cv timeline
+src/layouts/           BaseLayout and PostLayout
+src/data/config.json   site title, description and social links
+public/                CNAME and robots.txt
+```
 
-## 🧞 Commands
+Blog posts are an Astro content collection rooted at `blog/`, configured in
+`src/content.config.ts`. Frontmatter carries the title, date, hero image, badge
+and tags, and the tags generate the `/blog/tag/...` routes.
 
-All commands are run from the root of the project, from a terminal:
+Sister sites: [pour.coffee](https://pour.coffee) and
+[espresso.tools](https://espresso.tools).
 
-| Command                     | Action                                           |
-| :-------------------------- | :----------------------------------------------- |
-| `deno install`              | Installs dependencies (`--frozen`, as CI does)   |
-| `deno task dev`             | Starts local dev server at `localhost:4321`      |
-| `deno task build`           | Build your production site to `./dist/`          |
-| `deno task preview`         | Preview your build locally, before deploying     |
-| `deno task astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `deno task astro -- --help` | Get help using the Astro CLI                     |
+## Why there is a pnpm-workspace.yaml
 
-Dependencies and tasks live in `deno.json`. The stub `package.json` carries no
-dependencies — it exists so Deno applies Node-style resolution to the prerender
-entry Astro emits into `dist/`, which imports a few of Astro's own transitive
-deps by bare specifier. Delete it and `deno task build` fails with
-`Import "devalue" not a dependency and not in import map`.
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This is not a workspace. pnpm blocks dependency build scripts by default, and
+the Astro build fails unless esbuild is allowed to run its postinstall, which
+links its platform binary. pnpm 11 moved that setting out of `package.json`, so
+`allowBuilds` has to live in this file.
